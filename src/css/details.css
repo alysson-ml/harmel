@@ -1,0 +1,108 @@
+body {
+    background-color: #ffffff5b;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #4b0082;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    height: 80px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.header h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 50px;
+    flex-shrink: 0;
+}
+
+.user-greeting {
+    font-weight: bold;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: default;
+}
+
+a{
+    text-decoration: none;
+}
+
+.footer {
+    background-color: #4b0082;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+.card-produto {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-produto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.adcarrinho {
+    background-color: #fff;
+    color: #000;
+    border: #4b0082;
+    border-color: #4b0082;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.adcarrinho:hover {
+    background-color: #4b0082;
+    color: #fff;
+    transform: scale(1.0);
+}
+
+.adcarrinho:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
