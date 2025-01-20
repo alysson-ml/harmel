@@ -66,14 +66,14 @@ $conn->close();
 </div>
     <div class="icons-wrapper">
         <?php if ($usuarioLogado): ?>
-            <a href="adicionar_carrinho.php" class="icon-btn position-relative" onclick="verificarLoginCarrinho()">
+            <a href="cart.php" class="icon-btn position-relative" onclick="verificarLoginCarrinho()">
                 <i class="fas fa-shopping-cart"></i>
                 <span id="carrinho-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">0</span>
             </a>
         <?php else: ?>
             <a class="icon-btn" onclick="alert('Você precisa estar logado para acessar o carrinho.');"><i class="fas fa-shopping-cart"></i></a>
         <?php endif; ?>
-        <a href="favoritar_produto.php" class="icon-btn position-relative">
+        <a href="favorites.php" class="icon-btn position-relative">
             <i class="fas fa-heart"></i>
             <span id="favoritos-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">0</span>
         </a>
@@ -96,11 +96,11 @@ $conn->close();
 </header>
 
 <div class="categories">
-    <a href="calcinhas.php">Calcinhas</a>
-    <a href="maternidade.php">Maternidade</a>
-    <a href="modeladores.php">Modeladores</a>
-    <a href="pijamas.php">Pijamas</a>
-    <a href="sutias.php">Sutiãs</a>
+    <a href="underwear.php">Calcinhas</a>
+    <a href="maternity.php">Maternidade</a>
+    <a href="body-shaper.php">Modeladores</a>
+    <a href="pajamas.php">Pijamas</a>
+    <a href="bras.php">Sutiãs</a>
 </div>
 
 <!-- Carrossel -->
@@ -140,7 +140,7 @@ $conn->close();
         <?php if (count($produtos) > 0): ?>
             <?php foreach ($produtos as $produto): ?>
                 <div class="col-md-4 mb-3">
-                    <a href="detalhes.php?id=<?= $produto['id_produto'] ?>" class="card-link">
+                    <a href="details.php?id=<?= $produto['id_produto'] ?>" class="card-link">
                         <div class="card product-card">
                             <img src="<?= $baseImgPath . htmlspecialchars($produto['imagem']) ?>" class="card-img-top" alt="<?= htmlspecialchars($produto['nome']) ?>">
                             <div class="card-body">
@@ -191,8 +191,8 @@ $conn->close();
 <footer class="contatos">
     <h3>Entre em contato conosco:</h3>
     <div class="contatos-links">
-        <a href="https://www.instagram.com/harmellingerie/"><img src="../../assets/icons/instagram.png" alt="Instagram" />@instagram</a>
-        <a href="https://www.facebook.com/harmeljc/?locale=pt_BR"><img src="../../assets/icons/facebook.png" alt="Facebook" />facebook.com</a>
+        <a href="https://www.instagram.com/harmellingerie/"><img src="../../assets/icons/instagram.png" alt="Instagram" />@harmellingerie</a>
+        <a href="https://www.facebook.com/harmeljc/?locale=pt_BR"><img src="../../assets/icons/facebook.png" alt="Facebook" />Harmel JC</a>
         <a href="#"><img src="../../assets/icons/telefone.png" alt="Telefone" />(55)99999-9999</a>
     </div>
 </footer>
@@ -226,7 +226,6 @@ function adicionarAoCarrinho(id, nome, imagem, preco, event) {
     if (produtoExistente) {
         produtoExistente.quantidade += 1;
     } else {
-        // Adiciona novo produto ao carrinho
         carrinho.push({
             id: id,
             nome: nome,
