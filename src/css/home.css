@@ -1,0 +1,554 @@
+body {
+    background-color: #ffffff5b;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    box-sizing: border-box; /* Garantindo que padding e borda sejam considerados no tamanho total do elemento */
+}
+
+/* Estilos do cabeçalho */
+.header {
+    background-color: #4b0082;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    height: 80px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.header h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 50px;
+    flex-shrink: 0;
+}
+
+.user-greeting {
+    font-weight: bold;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: default;
+}
+
+a{
+    text-decoration: none;
+}
+
+.dropdown .dropdown-menu {
+    background-color: #934F93;
+    min-width: 200px;
+}
+
+.dropdown .dropdown-item {
+    color: #fff;
+    background-color: #934F93; /* Cor de fundo dos itens */
+}
+
+.dropdown .dropdown-item:active, .dropdown .dropdown-item:hover {
+    background-color: #6a0dad; /* Cor de fundo do item quando clicado */
+    color: #fff; /* Garantir que a cor do texto seja branca */
+}
+
+.botao-menu {
+    color: #fff;
+    background-color: #4b0082; /* Cor de fundo */
+    padding: 12px 15px; /* Aumentando o padding para um botão mais amplo */
+    font-size: 24px; /* Tamanho do ícone */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centralizando o conteúdo */
+    border: none;
+    border-radius: 5px; /* Borda arredondada */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+.botao-menu:hover {
+    background-color: #934F93; /* Mudança de cor ao passar o mouse */
+    color: #fff; /* Garantir que a cor do ícone permaneça branca */
+}
+
+.botao-menu:focus {
+    outline: none; /* Removendo a borda de foco padrão */
+    box-shadow: 0 0 0 3px rgba(106, 13, 175, 0.5); /* Adicionando uma sombra sutil ao focar */
+}
+
+.botao-menu:active {
+    background-color: #924f92; /* Cor de fundo ao clicar */
+    transform: scale(0.98); /* Efeito de clique com leve redução de tamanho */
+}
+
+/* Estilo para o ícone dentro do botão */
+.botao-menu i {
+    font-size: 24px; /* Tamanho do ícone */
+    transition: transform 0.3s ease; /* Transição suave para o ícone */
+}
+
+/* Estilos da busca */
+.search-wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search-wrapper input[type="search"] {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #924f92;
+    color: #fff;
+}
+
+/* Estilos dos ícones */
+.icons-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-btn {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    transition: all 0.3s ease; /* Adicionando transição suave */
+    border-radius: 5px;
+}
+
+.icon-btn:hover {
+    background-color: #4b0082;
+    color: #fff;
+    transform: scale(1.1); /* Aumenta o ícone em 10% ao passar o mouse */
+}
+
+/* Estilo para o carrinho e coração com o badge de contagem */
+.icon-btn .fa-shopping-cart,
+.icon-btn .fa-heart {
+    font-size: 24px; /* Tamanho do ícone */
+}
+
+.favorites-count, .cart-count {
+    display: flex;
+    align-items: center;
+}
+
+/* Contagem de itens no carrinho ou favoritos */
+#carrinho-count, #favoritos-count {
+    font-size: 14px;
+    color: #fff;
+    background-color: #6a0dad; /* Cor do badge */
+    border-radius: 50%;
+    padding: 2px 5px;
+    margin-left: -6px;
+    margin-right: -6px;
+    position: relative;
+    top: -6px;
+    line-height: 1.2;
+}
+
+/* Estilos das categorias agrupadas em um banner */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    background-color: #934F93;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    gap: 0.5rem;
+    border-top: none;
+    box-sizing: border-box;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.categories a {
+    color: #fff;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.categories a:hover {
+    transform: scale(1.05);
+}
+
+.categories a:active {
+    background-color: #5e35b1;
+    transform: scale(0.98);
+}
+
+.categories a i {
+    margin-right: 10px;
+}
+
+
+/* Carrossel de Imagens*/
+.carousel-inner {
+    height: 400px;
+    overflow: hidden;
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel-container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Produtos Card */
+/* Remover efeitos de hover na coluna */
+.col-md-4.mb-3:hover {
+    box-shadow: none; /* Remove a sombra, caso seja a causa do destaque */
+    transform: none;  /* Remove qualquer transformação */
+}
+/* Remover efeitos de hover na coluna */
+.col-md-4.mb-3:hover {
+    box-shadow: none; /* Remove a sombra, caso seja a causa do destaque */
+    transform: none;  /* Remove qualquer transformação */
+}
+/* Remover efeitos de hover na coluna */
+.col-md-4.mb-3:hover {
+    box-shadow: none; /* Remove a sombra, caso seja a causa do destaque */
+    transform: none;  /* Remove qualquer transformação */
+}
+/* Remover efeitos de hover na coluna */
+.col-md-4.mb-3:hover {
+    box-shadow: none; /* Remover sombras indesejadas */
+    transform: none;  /* Remover transformações no hover */
+}
+/* Efeito suave no card */
+.col-md-4.mb-3:hover .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transform: translateY(-5px); /* Levanta o card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+
+
+/* Card dos produtos */
+.card-link {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor padrão do texto */
+}
+
+.card-link:hover {
+    text-decoration: none; /* Garante que o sublinhado não apareça ao passar o mouse */
+}
+
+/* Botão Card Carrinho */
+.botao-grupo .btn-custom-outline{
+    border: 2px solid #4b0082;
+}
+
+button.btn-custom-outline {
+    background-color: transparent; /* Fundo transparente */
+    color: #4b0082; /* Cor do texto (usando a cor personalizada) */
+    border: 2px solid #4b0082; /* Borda colorida (a mesma cor personalizada) */
+    border-radius: 50%; /* Tornar a borda arredondada para formar um círculo */
+    padding: 0.5rem; /* Ajuste o tamanho do botão para dar mais espaço ao ícone */
+    font-size: 1.5rem; /* Aumente o tamanho do ícone */
+    font-weight: 400; /* Peso da fonte */
+    text-align: center; /* Alinhar o texto */
+    vertical-align: middle; /* Alinhamento vertical */
+    cursor: pointer; /* Cursor de pointer */
+    display: inline-block; /* Estilo de bloco */
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s; /* Efeito suave de transição */
+}
+
+/* Efeito hover */
+button.btn-custom-outline:hover {
+    background-color: #4b0082; /* Cor de fundo quando o mouse passa por cima */
+    color: #fff; /* Cor do texto quando o mouse passa por cima */
+    border-color: #4b0082; /* Cor da borda quando o mouse passa por cima */
+}
+
+/* Ícone dentro do botão */
+button.btn-custom-outline i {
+    font-size: 1.2rem; /* Tamanho maior para o ícone */
+}
+
+
+/* Estilos gerais para info-section e contatos */
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: #934F93;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.info-card {
+    width: 30%;
+    padding: 10px;
+}
+
+.info-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.info-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.info-card p {
+    font-size: 0.9em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contatos {
+    text-align: center;
+    padding: 20px 0;
+    color: #000;
+    flex-wrap: wrap;
+}
+
+.contatos h3 {
+    text-align: center;
+    margin: 0 20px 20px 20px;
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contatos-links {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contatos a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.contatos img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Estilos do carrossel */
+.carousel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 20px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.carousel {
+    flex: 1;
+    height: 400px;
+    overflow: hidden;
+    min-width: 300px;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-indicators button {
+    background-color: #000;
+    width: 5px;
+    height: 5px;
+}
+
+.carousel-indicators .active {
+    background-color: #fff;
+}
+
+/* Estilos do card de produtos */
+.card {
+    flex: 0 1 calc(33.33% - 20px);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.botao-grupo {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.botao-grupo .btn {
+    width: 48%;
+}
+
+button.btn {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+button.btn i {
+    font-size: 20px;
+}
+
+button.btn:hover {
+    opacity: 0.8;
+}
+
+button.btn-outline-primary {
+    background-color: #fff;
+    color: #007bff;
+    border-color: #007bff;
+}
+
+button.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+button.btn-outline-danger {
+    background-color: #fff;
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+button.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+button.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Estilo do rodapé */
+.footer {
+    background-color: #4b0082;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Fonte padrão para o corpo */
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para dispositivos móveis e telas pequenas */ /* Estilos para dispositivos móveis e telas pequenas */
+@media (max-width: 768px) {
+    #search-input {
+        width: 50%; /* Diminui a largura em telas médias */
+    }
+}
+
+@media (max-width: 480px) {
+    #search-input {
+        width: 80%; /* Diminui mais em telas menores */
+    }
+}
+
+/* Estilos para dispositivos móveis e telas pequenas */
+@media (max-width: 768px) {
+    #logo {
+        font-size: 2.5rem; /* Diminui o tamanho da fonte para telas médias */
+        margin-top: 15px; /* Ajusta o espaçamento superior */
+    }
+}
+
+@media (max-width: 480px) {
+    #logo {
+        font-size: 2rem; /* Diminui o tamanho da fonte para telas menores */
+        margin-top: 10px; /* Ajusta o espaçamento superior */
+    }
+}
