@@ -1,0 +1,120 @@
+body {
+    background-color: #ffffff5b;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.header {
+    background-color: #4b0082;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    height: 80px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.header h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 50px;
+    flex-shrink: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.user-greeting {
+    font-weight: bold;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: default;
+}
+
+.dropdown .dropdown-menu {
+    background-color: #4b0082;
+    border: none;
+    min-width: 200px;
+}
+
+.dropdown .dropdown-item {
+    color: #fff;
+}
+
+.dropdown .dropdown-item:hover {
+    background-color: #6a0dad;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #4b0082;
+    border-color: #4b0082;
+    padding: 10px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-secondary:hover {
+    background-color: #6a1b9a;
+    border-color: #6a1b9a;
+}
+
+.icons-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-btn {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.icon-btn:hover {
+    color: #6a1b9a;
+}
+
+.favorites-count {
+    display: flex;
+    align-items: center;
+}
+
+#favoritos-count {
+    font-size: 16px;
+    color: #fff;
+    margin-right: 5px;
+    background-color: #6a0dad;
+    border-radius: 50%;
+    padding: 2px 5px;
+}
+
+.footer {
+    background-color: #4b0082;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
