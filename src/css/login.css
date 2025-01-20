@@ -1,0 +1,166 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.corpo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.principal {
+    background-color: #934F93;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 40px;
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo-link {
+    position: relative;
+    text-decoration: none;
+}
+
+.logo-link:hover .tooltip-text {
+    display: block;
+}
+
+.alert {
+    font-size: 0.9rem;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.form-wrapper {
+    width: 100%;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.form-subtitle {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 0.95rem;
+    color: #fff;
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.botao-cadastro {
+    background-color: #4b0082;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 20px auto 0;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.botao-cadastro:hover {
+    background-color: #4b0082;
+}
+
+.form-actions p {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #fff;
+}
+
+.form-actions a {
+    color: #4b0082;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.form-actions a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #4b0082;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
